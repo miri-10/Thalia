@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Sprout, Eye, EyeOff } from "lucide-react";
+import { Eye, EyeOff } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -20,9 +20,7 @@ const LoginPage = () => {
       >
         <div className="text-center mb-8">
           <Link to="/" className="inline-flex items-center gap-2">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary">
-              <Sprout className="h-5 w-5 text-primary-foreground" />
-            </div>
+            <img src="/logo.png" alt="Thalia Logo" className="h-10 w-10 object-contain" />
             <span className="text-2xl font-bold">Thalia</span>
           </Link>
           <p className="mt-2 text-sm text-muted-foreground">Sign in to your farming dashboard</p>

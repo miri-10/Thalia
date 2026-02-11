@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import {
-  Sprout, Bell, User, CloudSun, TrendingUp, TrendingDown,
+  Bell, User, CloudSun, TrendingUp, TrendingDown,
   BarChart3, Calendar, Wallet, Wheat, MessageCircle, AlertTriangle,
   Home, PieChart, Settings, LogOut, ChevronDown
 } from "lucide-react";
@@ -81,9 +81,7 @@ const Dashboard = () => {
               <BarChart3 className="h-5 w-5" />
             </button>
             <Link to="/" className="flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
-                <Sprout className="h-4 w-4 text-primary-foreground" />
-              </div>
+              <img src="/logo.png" alt="Thalia Logo" className="h-8 w-8 object-contain" />
               <span className="text-lg font-bold hidden sm:block">Thalia</span>
             </Link>
           </div>
