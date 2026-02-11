@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/sheet"
 import { useCurrentUser } from "@/hooks/use-current-user"
 import { UserButton } from "@/components/auth/UserButton"
+import { LanguageToggle } from "@/components/layout/LanguageToggle"
 
 export function Navbar() {
     const [isOpen, setIsOpen] = React.useState(false)
@@ -60,7 +61,8 @@ export function Navbar() {
                 <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
                     <div className="w-full flex-1 md:w-auto md:flex-none">
                     </div>
-                    <nav className="flex items-center">
+                    <nav className="flex items-center gap-2">
+                        <LanguageToggle />
                         {user ? (
                             <UserButton />
                         ) : (
