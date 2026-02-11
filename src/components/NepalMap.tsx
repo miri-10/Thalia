@@ -6,26 +6,26 @@ import { motion } from "framer-motion";
 // District positions mapped to the nepal.png image (percentage-based)
 const districtPositions: Record<string, { x: number; y: number }> = {
   // Province 1 - Koshi (Far East)
-  ilam: { x: 90, y: 28 },
-  jhapa: { x: 95, y: 35 },
-  morang: { x: 92, y: 38 },
-  sunsari: { x: 88, y: 35 },
+  ilam: { x: 125, y: 87 },
+  jhapa: { x: 125, y: 93 },
+  morang: { x: 110, y: 93 },
+  sunsari: { x: 100, y: 93 },
   
   // Province 2 - Madhesh (South Central)
-  dhanusha: { x: 78, y: 58 },
-  bara: { x: 68, y: 60 },
-  parsa: { x: 64, y: 58 },
+  dhanusha: { x: 88, y: 87 },
+  bara: { x: 68, y: 80 },
+  parsa: { x: 64, y: 74 },
   
   // Province 3 - Bagmati (Central)
-  kathmandu: { x: 62, y: 42 },
-  lalitpur: { x: 63, y: 46 },
-  makwanpur: { x: 58, y: 50 },
-  chitwan: { x: 54, y: 54 },
+  kathmandu: { x: 69, y: 65 },
+  lalitpur: { x: 69, y: 67 },
+  makwanpur: { x: 58, y: 67 },
+  chitwan: { x: 56, y: 71 },
   
   // Province 4 - Gandaki (Central West)
-  kaski: { x: 48, y: 38 },
-  gorkha: { x: 54, y: 32 },
-  "nawalparasi-east": { x: 50, y: 52 },
+  kaski: { x: 47, y: 52 },
+  gorkha: { x: 62, y: 55},
+  "nawalparasi-east": { x: 50, y: 57},
   
   // Province 5 - Lumbini (West)
   rupandehi: { x: 42, y: 56 },
