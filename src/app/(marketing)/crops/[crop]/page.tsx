@@ -7,8 +7,12 @@ import { Button } from "@/components/ui/button"
 import { db } from "@/lib/db"
 import { notFound } from "next/navigation"
 
-export default async function CropDetailPage({ params }: { params: { crop: string } }) {
-    const cropNameSlug = decodeURIComponent(params.crop)
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export default async function CropDetailPage(props: any) {
+    const params = await props.params;
+    const cropParam = params.crop;
+    const cropNameSlug = decodeURIComponent(cropParam);
     // Simple case handling
     const formattedName = cropNameSlug.charAt(0).toUpperCase() + cropNameSlug.slice(1).toLowerCase();
 
@@ -110,7 +114,7 @@ export default async function CropDetailPage({ params }: { params: { crop: strin
                         <CardContent>
                             {crop.marketPrices.length > 0 ? (
                                 <div className="space-y-4">
-                                    {crop.marketPrices.map((price) => (
+                                    {crop.marketPrices.map((price: any) => (
                                         <div key={price.id} className="flex items-center justify-between border-b pb-2 last:border-0 last:pb-0">
                                             <div>
                                                 <div className="font-medium">{price.district.name}</div>
@@ -139,7 +143,7 @@ export default async function CropDetailPage({ params }: { params: { crop: strin
                         <CardContent>
                             <div className="flex flex-wrap gap-2">
                                 {crop.districts.length > 0 ? (
-                                    crop.districts.map((d) => (
+                                    crop.districts.map((d: any) => (
                                         <Link key={d.id} href={`/districts/${d.name.toLowerCase()}`}>
                                             <Badge variant="secondary" className="hover:bg-green-100 cursor-pointer transition-colors">
                                                 {d.name}
