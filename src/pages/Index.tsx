@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { MapPin, TrendingUp, CloudSun, Users } from "lucide-react";
+import { Users } from "lucide-react";
 import Background3D from "@/components/Background3D";
 import NepalMap from "@/components/NepalMap";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-[#0a0a1f] text-white relative overflow-hidden">
+    <div className="min-h-screen bg-[#0f1a0f] text-white relative overflow-hidden">
       <Background3D />
       
       {/* Top Banner */}
@@ -15,7 +15,7 @@ const Index = () => {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="relative z-20 bg-black/20 backdrop-blur-sm border-b border-white/10 py-2 px-4 text-center text-sm"
+        className="relative z-20 bg-black/20 backdrop-blur-sm border-b border-white/10 py-2 px-4 text-center text-xs tracking-widest uppercase"
       >
         Empowering Nepalese farmers with district-specific agricultural insights
       </motion.div>
@@ -27,7 +27,7 @@ const Index = () => {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-2xl font-bold flex items-center gap-2"
+            className="text-xl font-bold flex items-center gap-2"
           >
             <img src="/logo.png" alt="Thalia Logo" className="h-8 w-8 object-contain" />
             Thalia
@@ -38,10 +38,10 @@ const Index = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="flex items-center gap-6"
           >
-            <Link to="/map" className="text-sm hover:text-primary transition-colors hidden sm:block">
+            <Link to="/map" className="text-sm hover:text-primary transition-colors hidden sm:block font-medium">
               Districts
             </Link>
-            <Link to="/dashboard" className="text-sm hover:text-primary transition-colors hidden sm:block">
+            <Link to="/dashboard" className="text-sm hover:text-primary transition-colors hidden sm:block font-medium">
               Dashboard
             </Link>
             <Link to="/login">
@@ -60,16 +60,14 @@ const Index = () => {
       {/* Hero Section */}
       <main className="relative z-10 flex items-center justify-center min-h-[calc(100vh-180px)] px-4">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Icon */}
+          {/* Logo */}
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="mb-8 flex justify-center"
           >
-            <div className="w-20 h-20 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center border border-white/20 p-3">
-              <img src="/logo.png" alt="Thalia Logo" className="w-full h-full object-contain" />
-            </div>
+            <img src="/logo.png" alt="Thalia Logo" className="h-32 w-32 object-contain" />
           </motion.div>
 
           {/* Main Headline */}
@@ -77,61 +75,27 @@ const Index = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-bold mb-10 leading-tight"
+            className="text-3xl md:text-5xl lg:text-6xl font-bold mb-10 leading-tight tracking-tight"
+            style={{ fontFamily: 'Talent, Plus Jakarta Sans, sans-serif' }}
           >
             Join The Agriculture
             <br />
-            <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-orange-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-green-400 via-emerald-400 to-lime-400 bg-clip-text text-transparent">
               Layer of Nepal
             </span>
           </motion.h1>
 
-          {/* CTA Buttons */}
-          <motion.div
+          {/* Subtitle */}
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.7 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="text-base md:text-lg text-gray-300 max-w-2xl mx-auto"
           >
-            <a href="#map">
-              <Button 
-                size="lg" 
-                className="bg-white text-black hover:bg-gray-200 font-semibold px-8 min-w-[200px]"
-              >
-                Explore Districts
-              </Button>
-            </a>
-            <Link to="/login">
-              <Button 
-                size="lg" 
-                variant="outline"
-                className="bg-white/10 border-white/20 hover:bg-white/20 text-white min-w-[200px]"
-              >
-                Get Started
-              </Button>
-            </Link>
-          </motion.div>
-
-          {/* Stats */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 1 }}
-            className="mt-16 flex flex-wrap justify-center gap-8 md:gap-12 text-sm"
-          >
-            <div className="text-center">
-              <div className="text-xl md:text-2xl font-bold text-white mb-1">77</div>
-              <div className="text-gray-400 text-sm">Districts</div>
-            </div>
-            <div className="text-center">
-              <div className="text-xl md:text-2xl font-bold text-white mb-1">25+</div>
-              <div className="text-gray-400 text-sm">Crops</div>
-            </div>
-            <div className="text-center">
-              <div className="text-xl md:text-2xl font-bold text-white mb-1">50K+</div>
-              <div className="text-gray-400 text-sm">Farmers</div>
-            </div>
-          </motion.div>
+            Thalia is a community of the best farmers learning, growing,
+            <br />
+            and building sustainable agriculture in Nepal
+          </motion.p>
         </div>
       </main>
 
@@ -190,66 +154,26 @@ const Index = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               What is <span className="text-primary">Thalia</span>?
             </h2>
-            <p className="text-base md:text-lg text-gray-300 max-w-3xl mx-auto">
-              Thalia is Nepal's first comprehensive agricultural platform that combines 
-              district-specific data, real-time insights, and expert guidance to empower 
-              farmers across all 77 districts.
-            </p>
+            <div className="max-w-4xl mx-auto space-y-6 text-base md:text-lg text-gray-300 leading-relaxed">
+              <p>
+                Thalia is Nepal's first comprehensive agricultural platform that combines 
+                district-specific data, real-time insights, and expert guidance to empower 
+                farmers across all 77 districts.
+              </p>
+              <p>
+                Get tailored agricultural information for each district, including soil types, 
+                climate patterns, and recommended crops. Track live market prices for crops 
+                across different regions, helping farmers make informed decisions about when 
+                and where to sell.
+              </p>
+              <p>
+                Access accurate weather predictions and climate data to plan your farming 
+                activities and protect your crops from adverse conditions. Connect with 
+                agricultural experts and fellow farmers to share knowledge and build a 
+                stronger farming community.
+              </p>
+            </div>
           </motion.div>
-
-          {/* Features Grid */}
-          <div className="grid md:grid-cols-3 gap-8 mb-20">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all"
-            >
-              <div className="w-14 h-14 bg-primary/20 rounded-xl flex items-center justify-center mb-6">
-                <MapPin className="h-7 w-7 text-primary" />
-              </div>
-              <h3 className="text-lg font-bold mb-3">District-Specific Data</h3>
-              <p className="text-gray-400 text-sm">
-                Get tailored agricultural information for each of Nepal's 77 districts, 
-                including soil types, climate patterns, and recommended crops.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all"
-            >
-              <div className="w-14 h-14 bg-purple-500/20 rounded-xl flex items-center justify-center mb-6">
-                <TrendingUp className="h-7 w-7 text-purple-400" />
-              </div>
-              <h3 className="text-lg font-bold mb-3">Real-Time Market Prices</h3>
-              <p className="text-gray-400 text-sm">
-                Track live market prices for crops across different regions, helping 
-                farmers make informed decisions about when and where to sell.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all"
-            >
-              <div className="w-14 h-14 bg-orange-500/20 rounded-xl flex items-center justify-center mb-6">
-                <CloudSun className="h-7 w-7 text-orange-400" />
-              </div>
-              <h3 className="text-lg font-bold mb-3">Weather Forecasts</h3>
-              <p className="text-gray-400 text-sm">
-                Access accurate weather predictions and climate data to plan your 
-                farming activities and protect your crops from adverse conditions.
-              </p>
-            </motion.div>
-          </div>
         </div>
       </section>
 

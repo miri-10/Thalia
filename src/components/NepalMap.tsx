@@ -6,38 +6,38 @@ import { motion } from "framer-motion";
 // District positions mapped to the nepal.png image (percentage-based)
 const districtPositions: Record<string, { x: number; y: number }> = {
   // Province 1 - Koshi (Far East)
-  ilam: { x: 88, y: 35 },
-  jhapa: { x: 92, y: 48 },
-  morang: { x: 86, y: 50 },
-  sunsari: { x: 82, y: 48 },
+  ilam: { x: 90, y: 28 },
+  jhapa: { x: 95, y: 35 },
+  morang: { x: 92, y: 38 },
+  sunsari: { x: 88, y: 35 },
   
   // Province 2 - Madhesh (South Central)
-  dhanusha: { x: 68, y: 68 },
-  bara: { x: 60, y: 70 },
-  parsa: { x: 56, y: 68 },
+  dhanusha: { x: 78, y: 58 },
+  bara: { x: 68, y: 60 },
+  parsa: { x: 64, y: 58 },
   
   // Province 3 - Bagmati (Central)
-  kathmandu: { x: 54, y: 52 },
-  lalitpur: { x: 55, y: 56 },
-  makwanpur: { x: 52, y: 60 },
-  chitwan: { x: 48, y: 64 },
+  kathmandu: { x: 62, y: 42 },
+  lalitpur: { x: 63, y: 46 },
+  makwanpur: { x: 58, y: 50 },
+  chitwan: { x: 54, y: 54 },
   
   // Province 4 - Gandaki (Central West)
-  kaski: { x: 40, y: 48 },
-  gorkha: { x: 44, y: 44 },
-  "nawalparasi-east": { x: 42, y: 62 },
+  kaski: { x: 48, y: 38 },
+  gorkha: { x: 54, y: 32 },
+  "nawalparasi-east": { x: 50, y: 52 },
   
   // Province 5 - Lumbini (West)
-  rupandehi: { x: 34, y: 68 },
-  palpa: { x: 36, y: 58 },
-  dang: { x: 30, y: 62 },
-  banke: { x: 25, y: 62 },
+  rupandehi: { x: 42, y: 56 },
+  palpa: { x: 44, y: 48 },
+  dang: { x: 36, y: 48 },
+  banke: { x: 30, y: 42 },
   
   // Province 6 - Karnali (Mid West)
-  surkhet: { x: 20, y: 52 },
+  surkhet: { x: 28, y: 35 },
   
   // Province 7 - Sudurpashchim (Far West)
-  kailali: { x: 12, y: 54 },
+  kailali: { x: 18, y: 38 },
 };
 
 const NepalMap = () => {
