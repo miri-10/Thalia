@@ -1,0 +1,174 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 150 10% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 150 10% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 150 10% 12%;
+
+    --primary: 142 72% 29%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 30 30% 92%;
+    --secondary-foreground: 30 25% 25%;
+
+    --muted: 140 10% 96%;
+    --muted-foreground: 150 5% 45%;
+
+    --accent: 142 50% 94%;
+    --accent-foreground: 142 72% 22%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 140 10% 90%;
+    --input: 140 10% 90%;
+    --ring: 142 72% 29%;
+
+    --radius: 0.75rem;
+
+    --earth: 30 40% 45%;
+    --earth-foreground: 0 0% 100%;
+    --earth-light: 35 35% 95%;
+    --sky: 200 80% 55%;
+    --sky-foreground: 0 0% 100%;
+    --harvest: 45 90% 50%;
+    --harvest-foreground: 45 80% 15%;
+    --soil: 20 25% 30%;
+    --soil-foreground: 0 0% 100%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(142, 72%, 29%) 0%, hsl(160, 60%, 35%) 50%, hsl(142, 50%, 40%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0, 0%, 100%) 0%, hsl(140, 15%, 98%) 100%);
+    --gradient-warm: linear-gradient(135deg, hsl(30, 40%, 45%) 0%, hsl(35, 50%, 55%) 100%);
+    --gradient-sky: linear-gradient(135deg, hsl(200, 80%, 55%) 0%, hsl(210, 70%, 65%) 100%);
+
+    --shadow-card: 0 1px 3px 0 rgba(0, 0, 0, 0.06), 0 1px 2px -1px rgba(0, 0, 0, 0.06);
+    --shadow-elevated: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+    --shadow-hero: 0 20px 50px -12px rgba(22, 163, 74, 0.25);
+
+    --sidebar-background: 140 15% 98%;
+    --sidebar-foreground: 150 10% 25%;
+    --sidebar-primary: 142 72% 29%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 142 50% 94%;
+    --sidebar-accent-foreground: 142 72% 22%;
+    --sidebar-border: 140 10% 90%;
+    --sidebar-ring: 142 72% 29%;
+  }
+
+  .dark {
+    --background: 150 10% 8%;
+    --foreground: 0 0% 95%;
+
+    --card: 150 8% 12%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 150 8% 10%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 142 72% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 150 8% 18%;
+    --secondary-foreground: 0 0% 90%;
+
+    --muted: 150 8% 18%;
+    --muted-foreground: 150 5% 60%;
+
+    --accent: 142 50% 20%;
+    --accent-foreground: 142 72% 70%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 150 8% 20%;
+    --input: 150 8% 20%;
+    --ring: 142 72% 45%;
+
+    --earth: 30 40% 45%;
+    --earth-foreground: 0 0% 100%;
+    --earth-light: 30 30% 25%;
+    --sky: 200 80% 55%;
+    --sky-foreground: 0 0% 100%;
+    --harvest: 45 90% 50%;
+    --harvest-foreground: 45 80% 15%;
+    --soil: 20 25% 30%;
+    --soil-foreground: 0 0% 100%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(142, 72%, 35%) 0%, hsl(160, 60%, 30%) 50%, hsl(142, 50%, 35%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(150, 8%, 12%) 0%, hsl(150, 8%, 15%) 100%);
+    --gradient-warm: linear-gradient(135deg, hsl(30, 40%, 35%) 0%, hsl(35, 50%, 40%) 100%);
+    --gradient-sky: linear-gradient(135deg, hsl(200, 80%, 45%) 0%, hsl(210, 70%, 50%) 100%);
+
+    --shadow-card: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 1px 2px -1px rgba(0, 0, 0, 0.3);
+    --shadow-elevated: 0 10px 25px -5px rgba(0, 0, 0, 0.4), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+    --shadow-hero: 0 20px 50px -12px rgba(22, 163, 74, 0.4);
+
+    --sidebar-background: 150 8% 10%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 142 72% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 142 50% 20%;
+    --sidebar-accent-foreground: 142 72% 70%;
+    --sidebar-border: 150 8% 20%;
+    --sidebar-ring: 142 72% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    @apply font-bold tracking-tight;
+  }
+}
+
+@layer utilities {
+  .text-gradient-hero {
+    background: var(--gradient-hero);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .bg-gradient-card {
+    background: var(--gradient-card);
+  }
+
+  .bg-gradient-radial {
+    background: radial-gradient(circle, var(--tw-gradient-stops));
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .shadow-hero {
+    box-shadow: var(--shadow-hero);
+  }
+}
